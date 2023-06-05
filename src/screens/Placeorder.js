@@ -1,6 +1,7 @@
 import {
   FlatList,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -10,7 +11,10 @@ import React, { useEffect, useState } from "react";
 import Backbtn from "../components/Backbtn";
 import { btn1, colors, hr80 } from "../globals/style";
 
-const Placeorder = ({ navigation, route }) => {
+const Placeorder = ({ 
+  navigation 
+  //,route 
+}) => {
   // const {cartdata} = route.params;
   // const [orderdata, setOrderdata] = useState([]);
   // const [totalCost, setTotalCost] = useState('0');
@@ -53,52 +57,66 @@ const Placeorder = ({ navigation, route }) => {
   // }
   //},[userloggeduid])
 
-  const placenow= ()=> {
+  const placenow = ()=> {
     console.log('pay')
     alert('Order has been sent to Kitchen!')
+    navigation.navigate('table')
+  }
+
+  const ordercart = 
+  {
+    orderid: "1001",
+    table: "M5",
+    orderstatus: "pending",
+    orderdate: "2023-05-18 18:00 PM",
+    orderwaiter: "Tina",
+    ordercost: "20.50",
+    orderdata: [
+      {
+        Foodquantity: "2",
+        data: {
+          foodName: "Crispy Chicken",
+          foodPrice: "7.00",
+        },
+      },
+      {
+        Foodquantity: "1",
+        data: {
+          foodName: "Takoyaki",
+          foodPrice: "6.50",
+        },
+      },
+    ],
   }
 
   return (
     <ScrollView>
+      <StatusBar />
       <Backbtn navigation={navigation} redirectPage="usercart" />
       <View style={styles.container}>
         <Text style={styles.head1}>Your Order Summary</Text>
-        {/* <FlatList
+        <FlatList
           style={styles.c1}
-          data={orderdata.cart}
+          data={ordercart.orderdata}
           renderItem={({ item }) => {
-            return ( */}
+            return (
               <View style={styles.rowout}>
                 <View style={styles.row}>
                   <View style={styles.left}>
-                    <Text style={styles.qty}>2</Text>
-                    <Text style={styles.title}>Crispy chicken</Text>
-                    <Text style={styles.price}>$7.00</Text>
+                    <Text style={styles.qty}>{item.Foodquantity}</Text>
+                    <Text style={styles.title}>{item.data.foodName}</Text>
+                    <Text style={styles.price}>${item.data.foodPrice}</Text>
                   </View>
                   <View style={styles.right}>
                     <Text style={styles.totalprice}>
-                        {/* ${parseInt(item.Foodquantity)*parseInt(item.data.foodPrice)} */}
-                        $20.50
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.row}>
-                  <View style={styles.left}>
-                    <Text style={styles.qty}>1</Text>
-                    <Text style={styles.title}>Takoyaki</Text>
-                    <Text style={styles.price}>$6.50</Text>
-                  </View>
-                  <View style={styles.right}>
-                    <Text style={styles.totalprice}>
-                        {/* ${parseInt(item.Foodquantity)*parseInt(item.data.foodPrice)} */}
-                        $6.50
+                        ${parseInt(item.Foodquantity)*parseInt(item.data.foodPrice)}                         
                     </Text>
                   </View>
                 </View>
               </View>
-            {/* );
+             );
           }}
-        /> */}
+        /> 
 
         <Text style={hr80}></Text>
         <View style={styles.row}>
@@ -106,24 +124,23 @@ const Placeorder = ({ navigation, route }) => {
             <Text style={styles.title}>Order Total :</Text>
           </View>
           <View style={styles.right}>
-            <Text style={styles.totalprice}>$20.50</Text>
+            <Text style={styles.totalprice}>${ordercart.ordercost}</Text>
           </View>
         </View>
         <Text style={hr80}></Text>
 
         <View style={styles.statusout}>
-          <Text style={styles.head1}>Order Status</Text>
+          <Text style={styles.head1}>Order Details</Text>
           <View style={styles.row}>
             <View style={styles.left}>Table:</View>
             <View style={styles.right}>
-              <Text style={styles.title}>M5</Text>
+              <Text style={styles.title}>{ordercart.table}</Text>
             </View>
-          </View>
-          
+          </View>          
           <View style={styles.row}>
             <View style={styles.left}>Status:</View>
             <View style={styles.right}>
-              <Text style={styles.title}>Meals Cooking</Text>
+              <Text style={styles.title}>{ordercart.orderstatus}</Text>
             </View>
           </View>
 
@@ -163,6 +180,9 @@ const styles = StyleSheet.create({
     margin:10,
     textAlign:'center',
   },
+  c1:{
+    width:'95%',
+  },
   row: {
     flexDirection:'row',
     alignItems:'center',
@@ -172,9 +192,9 @@ const styles = StyleSheet.create({
   rowout: {
     flexDirection:'column',
     margin:10,
-    boxShadow: '2px 2px 10px #888888', //web use
+    boxShadow: '2px 2px 5px #888888', //web use
     backgroundColor: colors.col1,
-    padding: 10,
+    padding: 5,
     borderRadius: 10,
   },
   left:{

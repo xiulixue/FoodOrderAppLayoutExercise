@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,Image,TouchableOpacity, ScrollView, Alert } from 'react-native'
+import { StyleSheet, Text, View,Image,TouchableOpacity, ScrollView, Alert, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 import { Ionicons } from '@expo/vector-icons'; 
 import { navbtnout,navbtn, navbtnin, colors,btn2, hr80, incdecbtn, incdecinput,incdecout } from '../globals/style';
@@ -7,7 +7,9 @@ import crispychicken from '../../assets/crispychicken.webp';
 import { TextInput } from 'react-native-web';
 import HomeHeadNav from '../components/HomeHeadNav';
 
-const Productpage = ({navigation,route}) => {
+const Productpage = ({navigation
+  //,route
+}) => {
   // const data = route.params;
   // console.log( "prodoct page data", data)
   // if(route.params === undefined){
@@ -15,7 +17,6 @@ const Productpage = ({navigation,route}) => {
   // }
 
   const[quantity, setQuantity] = useState('1');
-
   const addtocart = ()=>{
     //console.log('add to cart')
     //const docRef = firebase.firestore().collection('UserCart').doc(firebase.auth().currentUser.uid);
@@ -48,9 +49,11 @@ const Productpage = ({navigation,route}) => {
   //console.log(data.foodAddonPrice);
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.containerout}>
+    <StatusBar />
       <HomeHeadNav title="Order for: M5"/*{data.tableId}*/ navigation={navigation}/>
       <Backbtn navigation={navigation} redirectPage='menu'/>
+    <ScrollView style={styles.container}>
       <View style={styles.container1}>
         <View style={styles.s1}>
           <Image
@@ -108,6 +111,7 @@ const Productpage = ({navigation,route}) => {
 
       </View>
     </ScrollView>
+    </View>
 )
 }
 

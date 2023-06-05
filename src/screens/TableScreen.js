@@ -26,7 +26,6 @@ const TableScreen = ({navigation}) => {
         {id: 11,name: "O3",},
         {id: 12,name: "O4",},
       ];
-    const[search, setSearch] = useState('');
     const pickTable = (item)=>{
         navigation.navigate('Menu', item)
       }

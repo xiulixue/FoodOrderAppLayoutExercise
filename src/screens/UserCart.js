@@ -2,7 +2,7 @@ import { FlatList, Image, StyleSheet, Text, View,TouchableOpacity } from "react-
 import React, { useEffect, useState } from "react";
 import Backbtn from "../components/Backbtn";
 import BottomNav from "../components/BottomNav";
-import { btn2, colors } from "../globals/style";
+import { btn2, colors, hr80 } from "../globals/style";
 import crispychicken from "../../assets/crispychicken.webp";
 import takoyaki from "../../assets/takoyaki.webp"
 import { AntDesign } from "@expo/vector-icons";
@@ -85,8 +85,7 @@ const UserCart = ({ navigation }) => {
       <Backbtn navigation={navigation} redirectPage={"menu"} />
       <BottomNav navigation={navigation} />
       <View style={styles.container}>
-        <Text style={styles.head1}>Order Details</Text>
-        <Text style={styles.head1}>Table: {data.tableId}</Text>
+        <Text style={styles.title}>Order Details</Text>
         {/* {cartdata == null || JSON.parse(cartdata).cart.length == 0 ?
                 <Text style={styles.head2}>Your Cart is Empty</Text> 
                 :  
@@ -117,7 +116,9 @@ const UserCart = ({ navigation }) => {
                     }}                 
                 />                
              } */}
+        <View style={hr80}></View>
         <View style={styles.cardlist}>
+          <Text style={styles.head1}>Table: M5{data.tableId}</Text>
           <View style={styles.cartcard}>
             <Image
               source={crispychicken} //change to orderdetails food item image
@@ -160,20 +161,22 @@ const UserCart = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </View>
-        </View>
 
-        <View style={styles.btncout}>
-            <View style={styles.c3}>
-                <Text style={styles.txt5}>Total:</Text>
-                <Text style={styles.txt6}>$20.5{totalcost}</Text>
-            </View>
+          <View style={styles.btncout}>
+              <View style={styles.c3}>
+                  <Text style={styles.txt5}>Total:</Text>
+                  <Text style={styles.txt6}>$20.5{totalcost}</Text>
+              </View>
 
-            <TouchableOpacity style={btn2} onPress={()=>{
-                  navigation.navigate('placeorder')
-                }}>
-                <Text style={styles.btntxt}>Place Order</Text>
-            </TouchableOpacity>
+              <TouchableOpacity style={btn2} onPress={()=>{
+                    navigation.navigate('placeorder')
+                  }}>
+                  <Text style={styles.btntxt}>Place Order</Text>
+              </TouchableOpacity>
+          </View>
         </View>
+        <View style={hr80}></View>
+
       </View>
     </View>
   );
@@ -192,9 +195,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: "100%",
-    // alignItems:'center',
+    alignItems:'center',
     backgroundColor: colors.col1,
     // height:'100%',
+  },
+  title: {
+    fontSize: 40,
+    textAlign: "center",
+    fontWeight:'200',
+    marginVertical: 5,
+    color: colors.text1,
   },
   head1: {
     fontSize: 20,
@@ -292,8 +302,8 @@ const styles = StyleSheet.create({
     alignItems:'center',
     marginTop:0,
     flexDirection:'row',
-    borderTopColor:colors.text3,
-    borderTopWidth:0.2,
+    // borderTopColor:colors.text3,
+    // borderTopWidth:0.2,
   },
   btntxt:{
     backgroundColor: colors.text1,

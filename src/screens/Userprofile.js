@@ -2,7 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'; //npm i axios
 import { Ionicons } from '@expo/vector-icons';
-import { navbtn, navbtnin, navbtnout, colors, btn1, btntxt1 } from '../globals/style'
+import { navbtn, navbtnin, navbtnout, colors, btn1, btntxt1, btn2 } from '../globals/style'
 import Backbtn from '../components/Backbtn';
 
 const Userprofile = ({navigation}) => {
@@ -43,6 +43,15 @@ const Userprofile = ({navigation}) => {
     //     getUserData();
     // },[userloggeduid])
     // console.log(userdata);
+    // const signOutFromApp= async() => {
+    //   firebase.auth().signOut().then(()=>{
+    //     alert('You are logged out');
+    //     navigation.navigate('login');
+    //   }).catch((error)=>{
+    //     alert('system error');
+    //   })
+    // }
+
     const userdata = [
       {
         name:'example@e.com',
@@ -67,12 +76,21 @@ const Userprofile = ({navigation}) => {
             }
           </Text>
         </View>
-        <TouchableOpacity style = {btn1} title="Sign Out" onPress={(e) => 
-              // signOutFromApp()
-              navigation.navigate('welcome')
-          }>
-                <Text style = {btntxt1}>Sign out</Text>
-        </TouchableOpacity>
+        <View style={styles.btnout}>
+          <TouchableOpacity style = {btn2} title="Change" onPress={(e) =>{ 
+                // signOutFromApp()
+                alert('you are logged out')
+                navigation.navigate('login')
+              }}>
+                  <Text style = {btntxt1}>Change User</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style = {btn2} title="Sign Out" onPress={(e) => 
+                // signOutFromApp()
+                navigation.navigate('welcome')
+            }>
+                  <Text style = {btntxt1}>Sign out</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   )
@@ -117,5 +135,12 @@ const styles = StyleSheet.create({
     head2in:{
       fontSize:20,
       fontWeight:'300',
+    },
+    btnout:{
+      width:'100%',
+      justifyContent:'center',
+      alignItems:'center',
+      // marginTop:10,
+      flexDirection:'row',
     },
 })

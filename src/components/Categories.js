@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     //elevation:10,
     boxShadow: '2px 2px 10px #888888', //web use
     borderRadius:5,
+    marginTop:10,
   },
   head:{
     color: colors.text1,

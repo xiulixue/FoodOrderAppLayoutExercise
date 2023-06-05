@@ -13,9 +13,9 @@ const BottomNav = ({navigation}) => {
                     onPress={()=>{navigation.navigate('table')}}/>
             </View>
 
-            <View style={styles.btncon2}>
-                <AntDesign name="search1" size={40} color="black" 
-                    style={styles.icon2} 
+            <View style={styles.btncon1}>
+                <AntDesign name="search1" size={28} color="black" 
+                    style={styles.icon1} 
                     onPress={()=>{navigation.navigate('menu')}}/>
             </View>
 
@@ -30,7 +30,7 @@ const BottomNav = ({navigation}) => {
                     size={24} 
                     color="black" 
                     style={styles.icon1} 
-                    onPress={()=>{navigation.navigate('placeorder')}}/>
+                    onPress={()=>{navigation.navigate('orderlist')}}/>
             </View>
         </View>
     </View>
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'white',
         width:'100%',
+        height:70,
         boxShadow: '2px 2px 10px #888888', //web use
         borderTopColor:colors.col1,
         borderTopWidth: 1,
@@ -62,10 +63,10 @@ const styles = StyleSheet.create({
     icon1:{
         color: colors.text1,
     },
-    icon2:{
-        color:'white',
+    icon2:{ 
+        color:'white',  //focused style
     },
-    btncon2:{
+    btncon2:{  //focused style
         alignItems:'center',
         justifyContent: 'center',
         position: 'relative',
@@ -79,8 +80,8 @@ const styles = StyleSheet.create({
         // alignItems: 'center',
         backgroundColor: 'white',
         boxShadow: '2px 2px 10px #888888', //web use
-        width: 40,
-        height:40,
+        width: 50,
+        height:50,
         borderRadius: 50,
         justifyContent: 'center',
         alignItems: 'center',

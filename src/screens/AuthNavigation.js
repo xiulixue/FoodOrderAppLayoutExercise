@@ -8,6 +8,7 @@ import Productpage from './Productpage';
 import Userprofile from './Userprofile';
 import UserCart from './UserCart';
 import Placeorder from './Placeorder';
+import Orderlist from './Orderlist';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +18,8 @@ const AuthNavigation = () => {
           screenOptions={{headerShown: false}}
           //initialRouteName='welcome'
           > 
-          <Stack.Screen name="welcome" component={WelcomeScreen} />
+        <Stack.Screen name="welcome" component={WelcomeScreen} />
+        <Stack.Screen name="orderlist" component={Orderlist} />
         <Stack.Screen name="login" component={LoginScreen} />
         <Stack.Screen name="placeorder" component={Placeorder} />
         <Stack.Screen name="usercart" component={UserCart} />

@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: '200',
     borderRadius: 10,
-    marginHorizontal: 10,
+    marginHorizontal: 20,
     textAlign: 'left',
   },
   cardout: {
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     //backgroundColor: 'aqua',
     width: 300,
     height:300,
-    margin:10,
+    // margin:5,
     borderRadius:10,
     borderWidth:1,
     borderColor:'#e8e8e8',
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   s3:{
     alignItems:'center',
     position:'absolute',
-    bottom:1,
+    bottom:30,
     width:'100%',
   },
   buybtn:{
