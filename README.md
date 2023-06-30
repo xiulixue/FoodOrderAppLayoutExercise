@@ -6,7 +6,7 @@
 
 Food Ordering APP
 
-This Ordering App is a just layout practice. Will use c# as backend and MongoDB as front end. 
+This Ordering App is a just layout practice. Will use c# as backend and MongoDB as database. 
 
 ## Preview
 
