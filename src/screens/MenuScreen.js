@@ -90,8 +90,6 @@ const styles = StyleSheet.create({
         width: "100%",
     },
     contentContainer:{
-        // flex:1,
-        // width: "100%",
         alignItems: 'center', 
         justifyContent: 'center',
     },

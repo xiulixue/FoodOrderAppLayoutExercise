@@ -40,6 +40,7 @@ const TableScreen = ({navigation}) => {
             style={styles.cardout}
             //horizontal
             showsHorizontalScrollIndicator={false}
+            numColumns={5}
             data={data}
             renderItem={({ item }) => (
                 <TouchableOpacity key={item.index} onPress={()=>{

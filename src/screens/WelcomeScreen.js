@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from "react-native";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.jpg";
 import { colors, hr80 } from "../globals/style";
 import {useNavigation} from '@react-navigation/native';
 
@@ -14,7 +14,8 @@ const WelcomeScreen = () => {
       style={styles.background}
     >
       <View style={styles.container}>
-        <Text style={styles.title}>Bean Scene Restaurant</Text>
+        <Text style={styles.title1}>Bean Scene</Text>
+        <Text style={styles.title}>Ordering App</Text>
         <View style={styles.logoout}>
           <Image style={styles.logo} source={logo} />
         </View>
@@ -41,12 +42,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  title1: {
+    fontSize: 40,
+    color: '#fff',
+    textAlign: "center",
+    marginVertical: 0,
+    fontWeight: "400",
+  },
   title: {
     fontSize: 40,
-    color: "gold",
+    color: '#fff',
     textAlign: "center",
     marginVertical: 10,
-    fontWeight: "200",
+    fontWeight: "400",
   },
   text: {
     fontSize: 18,
@@ -57,7 +65,6 @@ const styles = StyleSheet.create({
   logo: {
     height: "100%",
     width: "100%",
-    borderRadius: "50%",
   },
   logoout: {
     width: "40%",
@@ -65,7 +72,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent:'center',
-    borderRadius: "50%",
+    marginBottom: 80,
   },
   btnout: {
     flexDirection: "row",
