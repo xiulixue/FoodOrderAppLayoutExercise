@@ -30,4 +30,4 @@ This Ordering App is a just layout practice. Will use c# as backend and MongoDB 
 
 If you like this repository don't forget give it a ⭐ and also feel free to share feedback with us. 
 
-Contact Xiuli Xue => [Email](mailto:xuemurphy@gmail.com) [Linkedin](https://www.linkedin.com/in/xiuli-xue) [Github](https://github.com/xiulixue)
+Contact me => [Email](mailto:xuemurphy@gmail.com) [Linkedin](https://www.linkedin.com/in/xiuli-xue) [Github](https://github.com/xiulixue)
