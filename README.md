@@ -14,7 +14,7 @@ This Ordering App is a just layout practice. Will use c# as backend and MongoDB 
 
 ## Getting started
 
-1. Clone the repo to your local. Our Team Repo currently is in private status now, will open later. 
+1. Clone the repo to your local `[git clone https://github.com/xiulixue/FoodOrderAppLayoutExercise.git]`
 
 2. Navigate into project directory.
 
