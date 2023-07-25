@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
         margin:5,
         padding:10,
         borderRadius: 10,
-        boxShadow: '1px 1px 5px #888888', //web use
+        elevation:5,
+        //boxShadow: '1px 1px 5px #888888', //web use
         alignItems:'center',
         justifyContent:'center',
         textAlign:'center',
@@ -89,7 +90,8 @@ const styles = StyleSheet.create({
         margin:5,
         padding:10,
         borderRadius: 5,
-        boxShadow: '1px 1px 5px #888888', //web use
+        elevation:5,
+        //boxShadow: '1px 1px 5px #888888', //web use
         alignItems:'center',
         fontSize:18,
       },   

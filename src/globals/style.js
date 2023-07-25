@@ -1,6 +1,6 @@
 module.exports = {
     colors: {
-        col1: 'White',
+        col1: 'white',
         text1: 'red',
         text2: 'grey',
         text3: 'black',
@@ -17,8 +17,8 @@ module.exports = {
         marginVertical:10,
         alignItems: 'center',
         justifyContent: 'center',
-        //elevation:10, //only android
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:10, //only android
+        //boxShadow: '2px 2px 10px #888888', //web use
         color: 'white',
     },
     btntxt1:{ 
@@ -36,8 +36,8 @@ module.exports = {
         margin:10,
         alignItems: 'center',
         justifyContent: 'center',
-        //elevation:10, //only android
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:10, //only android
+        //boxShadow: '2px 2px 10px #888888', //web use
         color: 'white',
     },
 
@@ -68,7 +68,8 @@ module.exports = {
         height:40,
         alignItems:'center',
         justifyContent:'center',
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:10,
+        //boxShadow: '2px 2px 10px #888888', //web use
         borderRadius:10,
         borderLeftRadius:0,
     },
@@ -83,8 +84,8 @@ module.exports = {
         alignItems:'center',
         justifyContent:'center',
         borderRadius:30,
-        //elevation: 10,
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation: 10,
+        //boxShadow: '2px 2px 10px #888888', //web use
         width:25,
         // height:30,
         color:'white',
@@ -96,8 +97,8 @@ module.exports = {
         backgroundColor:'white',
         alignItems:'center',
         justifyContent: 'center',
-        //elevation:10,
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:10,
+        //boxShadow: '2px 2px 10px #888888', //web use
         padding:10,
         width:30,
         marginHorizontal:10,

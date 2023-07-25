@@ -17,8 +17,8 @@ module.exports = {
         marginVertical:10,
         alignItems: 'center',
         justifyContent: 'center',
-        //elevation:10, //only android
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:10, //only android
+       //boxShadow: '2px 2px 10px #888888', //web use
         color: 'white',
     },
     

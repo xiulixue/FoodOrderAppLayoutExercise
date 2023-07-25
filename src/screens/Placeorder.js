@@ -192,7 +192,8 @@ const styles = StyleSheet.create({
   rowout: {
     flexDirection:'column',
     margin:10,
-    boxShadow: '2px 2px 5px #888888', //web use
+    elevation:10,
+    //boxShadow: '2px 2px 5px #888888', //web use
     backgroundColor: colors.col1,
     padding: 5,
     borderRadius: 10,

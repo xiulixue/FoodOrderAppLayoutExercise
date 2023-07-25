@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical:10,
         alignSelf:'center',
-        //elevation: 20, //only android
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:5, //only android
+        //boxShadow: '2px 2px 10px #888888', //web use
     },
     input: {
         fontSize: 18,

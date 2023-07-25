@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
         padding:10,
         alignItems:'center',
         backgroundColor:colors.col1,
-        //elevation:20,
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:20,
+        //boxShadow: '2px 2px 10px #888888', //web use
         borderBottomLeftRadius:10,
         borderBottomRightRadius:10,
     },

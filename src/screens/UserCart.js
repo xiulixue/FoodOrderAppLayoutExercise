@@ -218,7 +218,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "200",
     marginVertical: 20,
-    boxShadow: "2px 2px 10px #888888", //web use
+    elevation:10,
+    //boxShadow: "2px 2px 10px #888888", //web use
     backgroundColor: colors.col1,
     width: "95%",
     height: "50%",
@@ -237,7 +238,8 @@ const styles = StyleSheet.create({
     width: "95%",
     alignSelf: "center",
     alignItems: "center",
-    boxShadow: "2px 2px 10px #888888", //web use
+    elevation:10,
+    //boxShadow: "2px 2px 10px #888888", //web use
   },
   cartimg: {
     width: 150,

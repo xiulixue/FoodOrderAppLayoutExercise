@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     width: '95%',
     //height: 100,
     //alignItems: 'center',
-    //elevation:10,
-    boxShadow: '2px 2px 10px #888888', //web use
+    elevation:10,
+    //boxShadow: '2px 2px 10px #888888', //web use
     borderRadius:5,
     marginTop:10,
   },
@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
     margin:10,
     padding:10,
     borderRadius: 10,
-    boxShadow: '1px 1px 5px #888888', //web use
+    elevation:5,
+    //boxShadow: '1px 1px 5px #888888', //web use
     alignItems:'center',
     justifyContent:'center',
     flexDirection:'row',

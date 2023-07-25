@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         padding:10,
         margin:10,
-        //elevation:10,
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:10,
+        //boxShadow: '2px 2px 10px #888888', //web use
     },
     searchresultsout:{
         width:'100%',

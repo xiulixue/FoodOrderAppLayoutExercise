@@ -54,7 +54,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         width:'100%',
         height:70,
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:10,
+        //boxShadow: '2px 2px 10px #888888', //web use
         borderTopColor:colors.col1,
         borderTopWidth: 1,
         borderTopEndRadius:10,
@@ -79,7 +80,8 @@ const styles = StyleSheet.create({
     btncon1:{
         // alignItems: 'center',
         backgroundColor: 'white',
-        boxShadow: '2px 2px 10px #888888', //web use
+        elevation:10,
+        //boxShadow: '2px 2px 10px #888888', //web use
         width: 50,
         height:50,
         borderRadius: 50,

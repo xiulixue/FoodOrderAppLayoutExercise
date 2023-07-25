@@ -226,7 +226,8 @@ const styles = StyleSheet.create({
     width:'98%',
     margin:5,
     borderRadius:10,
-    boxShadow: "2px 2px 10px #888888", //web use
+    elevation:10,
+    //boxShadow: "2px 2px 10px #888888", //web use
   },
   orderindex: {
     fontSize:20,
@@ -282,7 +283,8 @@ const styles = StyleSheet.create({
   },
   order:{
     margin:10,
-    boxShadow: "2px 2px 5px #888888", //web use
+    elevation:10,
+    //boxShadow: "2px 2px 5px #888888", //web use
     backgroundColor:colors.col1,
     padding:10,
     borderRadius:5,
